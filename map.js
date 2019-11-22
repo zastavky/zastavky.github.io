@@ -14,8 +14,12 @@ MAP.setView([49.1946378, 16.6070083], 16)
 
 fetch("https://github.com/zastavky/zastavky.github.io/blob/master/geojson/stops.geojson")
 .then(response => response.json())
-.then(stops_jmk => {
-    const STOPS_DETAIL = L.geoJSON(stops_jmk, {
+.then(data => {
+    let stop_icon = L.icon({
+        iconUrl: "icons/zastavka_kordis_100_100.svg",
+        iconSize: [15, 15],
+    });
+    const STOPS_DETAIL = L.geoJSON(data, {
         pointToLayer: function (geoJsonPoint, latlng) {
             return L.marker(latlng, { icon: stop_icon});
         },
@@ -33,11 +37,8 @@ fetch("https://github.com/zastavky/zastavky.github.io/blob/master/geojson/stops.
 });
 
 
-let stop_icon = L.icon({
-    iconUrl: "icons/zastavka_kordis_100_100.svg",
-    iconSize: [15, 15],
-});
 
+/*
 let stops_detail = L.geoJSON(stops_jmk, {
     pointToLayer: function (geoJsonPoint, latlng) {
         return L.marker(latlng, { icon: stop_icon});
@@ -81,3 +82,4 @@ MAP.on("zoom", function() {
         stops.remove();
     }
 })
+*/
