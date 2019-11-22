@@ -1,4 +1,4 @@
-"use-strict";
+"use strict";
 console.log("connected");
 
 const MAP_ID = document.getElementById("m");

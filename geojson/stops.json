@@ -1,5 +1,4 @@
-{"type":"FeatureCollection", "features":[
-{"type":"Feature","geometry":{"type":"Point","coordinates":[16.380187,48.751285]},"properties":{"stop_id":"U15775Z2","stop_name":"Hevlín, škola","zone_id":570,"location_type":0,"parent_station":"U15775N1","wheelchair_boarding":2},"id":"U15775Z2"},
+{"type":"FeatureCollection", "features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[16.380187,48.751285]},"properties":{"stop_id":"U15775Z2","stop_name":"Hevlín, škola","zone_id":570,"location_type":0,"parent_station":"U15775N1","wheelchair_boarding":2},"id":"U15775Z2"},
 {"type":"Feature","geometry":{"type":"Point","coordinates":[16.38346,48.761387]},"properties":{"stop_id":"U15773Z2","stop_name":"Hevlín, cihelna","zone_id":570,"location_type":0,"parent_station":"U15773N2","wheelchair_boarding":2},"id":"U15773Z2"},
 {"type":"Feature","geometry":{"type":"Point","coordinates":[16.395222,48.796862]},"properties":{"stop_id":"U15627Z2","stop_name":"Hrabětice","zone_id":560,"location_type":0,"parent_station":"U15627N3","wheelchair_boarding":2},"id":"U15627Z2"},
 {"type":"Feature","geometry":{"type":"Point","coordinates":[16.386832,48.799235]},"properties":{"stop_id":"U15640Z2","stop_name":"Šanov, u mostu","zone_id":560,"location_type":0,"parent_station":"U15640N4","wheelchair_boarding":2},"id":"U15640Z2"},
