@@ -1,0 +1,52 @@
+*                       {margin : 0rem; padding : 0rem; font-size: 100%;}
+
+body                    {background-color: #e6e6e6; font-family: Arial;}
+
+.panel                  {position: fixed; height: 100%; top: 0em; right:0em; bottom: 0em; width: 25em; background-color: white; box-shadow: -2px 0px 5px #a9a9a9;
+                        transition: all 500ms;}
+
+.panel.hidden           {right: -25em;}
+
+#menu ul                {margin-left: 0.5625rem; margin-top: -0.189rem; margin-bottom: 0.1875rem;} /*0.1875*/
+
+#menu-window            {margin-left: 0.5625rem;}
+
+#menu li                {background-color: #e6e6e6; float: left; height: 3.125rem; list-style-type: none; width: 4.6875rem;}
+
+#menu li:not(:last-child)       {border-right: 0.0625rem solid #a9a9a9;}
+
+#menu ul li a           {font-size: 0.8125rem; padding: 1.25rem; position: relative; top: 1.1875rem; color: black; font-weight: bold; text-decoration: none;}
+
+#menu li:hover          {background-color: #a9a9a9; cursor: pointer;}
+
+
+#menu ul li a:hover     {color: white;}
+
+div #menu-window        {top: 9.5625rem; bottom: 10vh; left: 0rem; right: 0rem; display: block; border: 0.0625rem solid #e6e6e6; overflow: auto; position: absolute;
+                        text-align: justify; padding: 0.3rem; width: 22.9625rem /*(.panel)'s width - 2* div#menu-window border - 2* div#menu-window paading - 0.75rem */}
+
+#footer                 {position: absolute; width: 23.875rem; bottom: 0.3125rem; right: 0.3125rem; margin-top: 0.1875rem; padding-top: 0px; font-size: 0.625rem;}
+
+.main                   {position: absolute; top: 0px; right: 0px; left: 0px; bottom: 0px; height: 100vh; margin-right: 25em; background-color: white; z-index: -1;}
+
+.main.hidden_panel      {width: 100vw;}
+
+#m                      {height: 100vh;}
+
+
+#button                 {width: 30px; height: 40px; position: fixed; top: 50%; right: 25rem; background-color: white; border: none; box-shadow: 0px 0px 5px #a9a9a9;
+                        transition: all 500ms; cursor: pointer; font-family: sans-serif; font-size: 1.5em;}
+
+#button:focus           {outline: none;}
+
+#button.hidden_btn      {right: 0%;}
+
+.cviceni_2 ul           {margin: 10px;}
+
+.cviceni_2 ul li        {float: left; margin: 12px; list-style-type: none; background-color: #e6e6e6; border: 2px solid  #a9a9a9;} 
+
+.cviceni_2 p, .cviceni_2 a          {padding-left: 2px; padding-right: 2px; color: black; text-decoration: none; height: 40px; text-align: center;}   
+
+.cviceni_2 a:hover      {color: white; text-shadow: 0px 0px 3px black; transition: color 0.1s, text-shadow 0.1s;}
+
+.cviceni_2 img          {padding: 0.5px; transition: all 500ms;}
