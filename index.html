@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Najdi si linku">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Najdi linku</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+        crossorigin=""></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://github.com/calvinmetcalf/leaflet-ajax/blob/gh-pages/dist/leaflet.ajax.min.js"></script>
+    <script type="text/javascript" src="geojson/stops.geojson"></script>
+    
+
+</head>
+
+<body>
+    <div class="main">
+
+        <div id="m">
+            
+            <script type="text/javascript" src="map.js">
+                </script>
+        </div>
+    </div>
+    <div>
+        <button id="button" onclick="hideToolbar()">||</button>
+    </div>
+    <div class="panel">
+        <div id="header">
+            <img src="icons/find_icon_300_100.svg" alt="logo stránky"
+                style="width:300px; height:100px; position: relative; left: 45px;">
+        </div>
+
+        <div id="menu">
+            <ul>
+                <li>
+                    <a href='index.html' title='ÚVOD'>ÚVOD</a>
+                </li>
+                <li>
+                    <a>LINKY</a>
+                </li>
+                <li>
+                    <a>UZLY</a>
+                </li>
+                <li>
+                    <a>INFO</a>
+                </li>
+                <li>
+                    <a href="cviceni_2.html" title="Cvičení 2">CV. 2</a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="menu-window">
+            <p>Vítejte na stránkách pro vyhledávání zastávek v&nbsp;IDS JMK. Nyní se bude řešit optimalizace vykreslování zastávek (WebGL/shlukování) a&nbsp;stahování informací pro zobrazení odjezdů spojů
+            </p>
+        </div>
+
+        <div id="footer">
+            <p>|Toto je výstup seminární práce|</p>
+        </div>
+    </div>
+
+
+
+</body>
+
+
+</html>

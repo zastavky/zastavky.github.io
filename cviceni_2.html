@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Najdi si linku">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Najdi linku</title>
+    <link rel="stylesheet" type="text/css" href="stylecv2.css">
+    <script type="text/javascript" src="script.js"></script>
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="cviceni_2">
+            <ul>
+                <li>
+                    <div>
+                        <img src="http://geoportal.cuzk.cz/WMS_ZM10_PUB/WMService.aspx?&service=WMS&request=GetMap&version=1.3.0&styles=&format=image/png8&layers=GR_ZM10&crs=EPSG:32634&bbox=296863.50,5525223.74,297668.8933,5526029.133&height=256&width=256"
+                            height="256" width="256" alt="WMS">
+                        <p>ukázka WMS z okolí místa bydliště</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="http://geoportal.cuzk.cz/WMTS_ZM_900913/WMTService.aspx?service=wmts&version=1.0.0&request=GetTile&TileMatrix=13&TileRow=2806&TileCol=4473&format=image/png&style=default&TileMatrixSet=googlemapscompatibleext2:epsg:3857&layer=zm"
+                            height="256" width="256" alt="WMTS">
+                        <p>ukázka WMTS - Brno-střed</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="pic/WFS_KM_wms_256_256.jpg" height="256" width="256" alt="WFS-náhled">
+                        <p><a href="http://services.cuzk.cz/wfs/inspire-cp-wfs.asp?service=WFS&request=GetFeature&version=2.0.0&typenames=cp:CadastralParcel&srsName=urn:ogc:def:crs:EPSG::32634&bbox=296377.33,5524720.92,297773.51,5525757.05"
+                                title="odkaz na WFS">ukázka WFS</a></p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="pic/Brno_HN_256_256.jpg" height="256" width="256"
+                            alt="zastávka Hlavní nádraží v Brně">
+                        <p>zastávka Hlavní nádraží v Brně<br><a
+                                href="https://commons.wikimedia.org/wiki/File:Brno,_N%C3%A1dra%C5%BEn%C3%AD,_zast%C3%A1vka_Hlavn%C3%AD_n%C3%A1dra%C5%BE%C3%AD,_tramvaj.jpg"
+                                title="odkaz na obrázek">-zdroj-</a></p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="pic/Karolina_256_256.jpg" height="256" width="256" alt="zastávka Karolina v Ostravě">
+                        <p>zastávka Karolina v Ostravě<br><a
+                                href="https://mapy.cz/zakladni?x=18.2868080&y=49.8327785&z=17&source=pubt&id=15203066&gallery=1"
+                                title="odkaz na obrázek">-zdroj-</a></p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="pic/Svinov_mosty_256_256.jpg" height="256" width="256"
+                            alt="zastávka Svinov-mosty v Ostravě">
+                        <p>zastávka Karolina v Ostravě<br><a
+                                href="http://moravia.cz/wp-content/uploads/2018/01/MG_4729.jpg"
+                                title="odkaz na zdroj">-zdroj-</a></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div>
+        <button id="button" onclick="hideToolbar()">||</button>
+    </div>
+    <div class="panel">
+        <div id="header">
+            <img src="icons/find_icon_300_100.svg" alt="logo stránky" width="300" height="100"
+                style="width:300px; position: relative; left: 45px;">
+        </div>
+
+        <div id="menu">
+            <ul>
+                <li>
+                    <a href="index.html" title="ÚVOD">ÚVOD</a>
+                </li>
+                <li>
+                    <a>LINKY</a>
+                </li>
+                <li>
+                    <a>UZLY</a>
+                </li>
+                <li>
+                    <a>INFO</a>
+                </li>
+                <li>
+                    <a href="cviceni_2.html" title="Cvičení 2">CV. 2</a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="menu-window">
+            <p>Jakožto cvičení jsou zde uvedeny ukázky dvou základních webových služeb WMS, WMTS a WFS. Poslední tři obrázky pak slouží pro procvičení vkládání obrázků na internetovou stránku.
+            </p>
+        </div>
+
+        <div id="footer">
+            <p>|Toto je výstup seminární práce|</p>
+        </div>
+    </div>
+
+
+
+</body>
+
+
+</html>
