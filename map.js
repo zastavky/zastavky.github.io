@@ -14,12 +14,27 @@ MAP.setView([49.1946378, 16.6070083], 16)
 
 fetch("https://raw.githubusercontent.com/zastavky/zastavky.github.io/master/geojson/stops.geojson")
 .then(response => response.json())
-.then(data => {
+.then(stops_json => {
     let stop_icon = L.icon({
         iconUrl: "icons/zastavka_kordis_100_100.svg",
         iconSize: [15, 15],
     });
-    const STOPS_DETAIL = L.geoJSON(data, {
+    const STOPS_DETAIL = L.geoJSON(stops_json, {
+        pointToLayer: function (geoJsonPoint, latlng) {
+            return L.marker(latlng, { icon: stop_icon});
+        },
+        filter: function (feature) {
+            if (feature.properties.location_type === 0) {
+                return true;
+            }
+        }
+    }
+    ).bindPopup(function (layer) {
+        return layer.feature.properties.stop_name;
+    });
+    STOPS_DETAIL.addTo(MAP)
+
+    const STOPS = L.geoJSON(stops_json, {
         pointToLayer: function (geoJsonPoint, latlng) {
             return L.marker(latlng, { icon: stop_icon});
         },
@@ -31,8 +46,21 @@ fetch("https://raw.githubusercontent.com/zastavky/zastavky.github.io/master/geoj
     }
     ).bindPopup(function (layer) {
         return layer.feature.properties.stop_name;
-    });
-    STOPS_DETAIL.addTo(MAP)
+    })
+
+    MAP.on("zoom", function() {
+        if (MAP.getZoom() >= 16) {
+            stops_detail.addTo(MAP);
+            stops.remove();
+        }
+        else if (MAP.getZoom() >= 10 && MAP.getZoom() < 16 ) {
+            stops_detail.remove();
+            stops.addTo(MAP);
+        }
+        else if (MAP.getZoom() < 10) {
+            stops.remove();
+        }
+    })
 
 });
 
