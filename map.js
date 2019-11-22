@@ -12,7 +12,7 @@ const MAPY_CZ = L.tileLayer(URL_MAPY_CZ, {
 MAP.addLayer(MAPY_CZ)
 MAP.setView([49.1946378, 16.6070083], 16)
 
-fetch("https://gist.githubusercontent.com/zastavky/9e66108623c06425726164dfa5687751/raw/16113f27561d4a757b506eeda0970fb999e565da/stops.geojson")
+fetch("https://raw.githubusercontent.com/zastavky/zastavky.github.io/master/geojson/stops.geojson")
 .then(response => response.json())
 .then(data => {
     let stop_icon = L.icon({
