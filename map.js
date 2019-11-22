@@ -12,11 +12,24 @@ const MAPY_CZ = L.tileLayer(URL_MAPY_CZ, {
 MAP.addLayer(MAPY_CZ)
 MAP.setView([49.1946378, 16.6070083], 16)
 
-fetch("https://gist.githubusercontent.com/SLeitgeb/f136a1d4d28c2f9ebdfe035bc3027b6d/raw/87b3bea8252bea3438fe7dfa937b79dcb83f0bea/vozejkmap.geojson")
+fetch("https://github.com/zastavky/zastavky.github.io/blob/master/geojson/stops.geojson")
 .then(response => response.json())
-.then(data => {
-    console.log(data);
-    const VOZEJK = L.geoJSON(data).addTo(MAP);
+.then(stops_jmk => {
+    const STOPS_DETAIL = L.geoJSON(stops_jmk, {
+        pointToLayer: function (geoJsonPoint, latlng) {
+            return L.marker(latlng, { icon: stop_icon});
+        },
+        filter: function (feature) {
+            if (feature.properties.location_type === 1) {
+                return true;
+            }
+        }
+    }
+    ).bindPopup(function (layer) {
+        return layer.feature.properties.stop_name;
+    });
+    STOPS_DETAIL.addTo(MAP)
+
 });
 
 
