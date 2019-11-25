@@ -36,7 +36,7 @@ div #menu-window        {top: 9.5625rem; bottom: 10vh; left: 0rem; right: 0rem; 
 
 .clusterText            {color: black; position: relative; top: 0.2rem; }
 
-.clusterIcon            {background-image: url("icons/zastavka_kordis_100_100_negative.svg"); font-size: 0.8rem; font-family: 'Arial Narrow' ;text-align: center; }
+.clusterIcon            {background-image: url("../icons/zastavka_kordis_100_100_negative.svg"); font-size: 0.8rem; font-family: 'Arial Narrow' ;text-align: center; }
 
 #button                 {width: 30px; height: 40px; position: fixed; top: 50%; right: 25rem; background-color: white; border: none; box-shadow: 0px 0px 5px #a9a9a9;
                         transition: all 500ms; cursor: pointer; font-family: sans-serif; font-size: 1.5em;}
