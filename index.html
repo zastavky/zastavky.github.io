@@ -6,7 +6,7 @@
     <meta name="description" content="Najdi si linku">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Najdi linku</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
         integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
@@ -15,9 +15,12 @@
     <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
         integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
         crossorigin=""></script>
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="scripts/script.js"></script>
     <script src="https://github.com/calvinmetcalf/leaflet-ajax/blob/gh-pages/dist/leaflet.ajax.min.js"></script>
-    <script type="text/javascript" src="geojson/stops.geojson"></script>
+
+    <script src="scripts/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/MarkerCluster.css">
+
     
 
 </head>
@@ -27,7 +30,7 @@
 
         <div id="m">
             
-            <script type="text/javascript" src="map.js">
+            <script type="text/javascript" src="scripts/map.js">
                 </script>
         </div>
     </div>
@@ -43,13 +46,13 @@
         <div id="menu">
             <ul>
                 <li>
-                    <a href='index.html' title='ÚVOD'>ÚVOD</a>
+                    <div id="intro">ÚVOD</div>
                 </li>
                 <li>
-                    <a>LINKY</a>
+                    <div id="nodesBrno">BRNO</div>
                 </li>
                 <li>
-                    <a>UZLY</a>
+                    <div id="nodesRegion">REGION</div>
                 </li>
                 <li>
                     <a>INFO</a>
@@ -61,8 +64,7 @@
         </div>
 
         <div id="menu-window">
-            <p>Vítejte na stránkách pro vyhledávání zastávek v&nbsp;IDS JMK. Nyní se bude řešit optimalizace vykreslování zastávek (WebGL/shlukování) a&nbsp;stahování informací pro zobrazení odjezdů spojů
-            </p>
+            <p>Vítejte na stránkách pro vyhledávání zastávek v&nbsp;IDS JMK. Nyní se bude řešit optimalizace vykreslování zastávek (WebGL/shlukování) a&nbsp;stahování informací pro zobrazení odjezdů spojů</p>
         </div>
 
         <div id="footer">
