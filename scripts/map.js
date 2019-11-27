@@ -106,3 +106,6 @@ getUserAsync("https://raw.githubusercontent.com/zastavky/zastavky.github.io/mast
 
 });
 
+
+getUserAsync("https://mapa.idsjmk.cz/api/Departures?stopid=1753&postid=1")
+    .then(data => {console.log(data)})
