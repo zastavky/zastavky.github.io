@@ -91,7 +91,7 @@ function switchNodesBrno() {
                 if (e.target.tagName == "TD") {
                     fetch("https://raw.githubusercontent.com/zastavky/zastavky.github.io/master/geojson/stops.geojson")
                         .then(response => response.json())
-                        .then(stops_json => {
+                        .then(stops_json => {                            
                             newBounds = []
                             let stops
                             stops = e.srcElement.innerHTML.toUpperCase().split(" + ")
@@ -117,3 +117,8 @@ function switchNodesBrno() {
             })
         })
 }
+/*
+var name = "";
+$.get('https://cors-anywhere.herokuapp.com/https://pdf.dpmb.cz/StopList.aspx?lc=36&zn=Chaloupky&cu=1178&n=9' + name, function(response) {
+    let a = response.match("<a class=\"pdf inline\" href=\"[\\D\\d]*\">Česká<\/a>");
+console.log(a[0])});*/
