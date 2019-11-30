@@ -6,7 +6,7 @@
     <meta name="description" content="Najdi si linku">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Najdi linku</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
         integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
@@ -17,17 +17,18 @@
         crossorigin=""></script>
     <script type src="scripts/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="scripts/script.js"></script>
-    
+
 
     <script src="https://github.com/calvinmetcalf/leaflet-ajax/blob/gh-pages/dist/leaflet.ajax.min.js"></script>
 
     <script src="scripts/Leaflet.GraphicScale.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/Leaflet.GraphicScale.min.css">
-    
+
     <script src="scripts/leaflet.markercluster.js"></script>
     <link rel="stylesheet" type="text/css" href="css/MarkerCluster.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
-    
+
 
 </head>
 
@@ -35,9 +36,9 @@
     <div class="main">
 
         <div id="m">
-            
+
             <script type="text/javascript" src="scripts/map.js">
-                </script>
+            </script>
         </div>
     </div>
     <div>
@@ -61,16 +62,16 @@
                     <div id="nodesRegion">REGION</div>
                 </li>
                 <li>
-                    <a>INFO</a>
+                    <div id="info">INFO</div>
                 </li>
                 <li>
-                    <a href="cviceni_2.html" title="Cvičení 2">CV. 2</a>
+                    <a href="cviceni_2.html">CV. 2</a>
                 </li>
             </ul>
         </div>
 
         <div id="menu-window">
-            <p>Vítejte na stránkách pro vyhledávání zastávek v&nbsp;IDS JMK. Nyní se bude řešit optimalizace vykreslování zastávek (WebGL/shlukování) a&nbsp;stahování informací pro zobrazení odjezdů spojů</p>
+            <script>switchIntro()</script>
         </div>
 
         <div id="footer">

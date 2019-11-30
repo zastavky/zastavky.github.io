@@ -6,20 +6,21 @@ function hideToolbar() {
     document.getElementById("button").classList.toggle("hidden_btn");
     document.getElementsByClassName("main")[0].classList.toggle("hidden_panel");
     MAP.invalidateSize({ animate: true });
-    console.log(document.getElementsByClassName("panel")[0].classList);
+    //console.log(document.getElementsByClassName("panel")[0].classList);
 }
 
 window.addEventListener("load", function (e) {
     document.getElementById("intro").onclick = function () { switchIntro() };
     document.getElementById("nodesBrno").onclick = function () { switchNodesBrno() };
     document.getElementById("nodesRegion").onclick = function () { switchNodesRegion() };
+    document.getElementById("info").onclick = function () { switchInfo() };
 })
 
 function switchIntro() {
     let menu_window_new = document.getElementById("menu-window")
     let introText = "<p>Vítejte na stránkách pro vyhledávání zastávek v&nbsp;" +
-        "IDS JMK. Nyní se bude řešit optimalizace vykreslování zastávek (WebGL/shlukování) a&nbsp;" +
-        "stahování informací pro zobrazení odjezdů spojů</p>"
+        "IDS JMK. Na&nbspzáložkách Brno a&nbspRegion se můžete rychle navigovat na&nbspjednotlivé přestupní uzly v&nbspJihomoravském kraji. " + 
+        "Po kliknutí na zastávku se zobrazí aktuální odjezdy (jsou-li k dispozici).</p>"
     menu_window_new.innerHTML = introText
 }
 
@@ -57,8 +58,7 @@ function switchNodesRegion() {
                                     newBounds.push(newPoint)
                                 }
                             }
-                            if (newBounds.length > 0)
-                                {MAP.fitBounds(newBounds)}
+                            if (newBounds.length > 0) { MAP.fitBounds(newBounds) }
                         }
                         ).catch(e => {
                             console.log(e);
@@ -71,7 +71,7 @@ function switchNodesRegion() {
 
 function switchNodesBrno() {
     let menu_window_new = document.getElementById("menu-window")
-    menu_window_new.removeEventListener("click", function() {})
+    menu_window_new.removeEventListener("click", function () { })
     let innerHTMLText = "<table class='nodesTable'>"
     fetch("https://gist.githubusercontent.com/zastavky/2c0471269e67e21c0777f257f159ca59/raw/506dfb1041d3bd1f75de2b7a11d28ec7fb4a284d/nodesBrno.json")
         .then(response => response.json())
@@ -91,7 +91,7 @@ function switchNodesBrno() {
                 if (e.target.tagName == "TD") {
                     fetch("https://raw.githubusercontent.com/zastavky/zastavky.github.io/master/geojson/stops.geojson")
                         .then(response => response.json())
-                        .then(stops_json => {                            
+                        .then(stops_json => {
                             newBounds = []
                             let stops
                             stops = e.srcElement.innerHTML.toUpperCase().split(" + ")
@@ -107,8 +107,7 @@ function switchNodesBrno() {
                                     }
                                 }
                             }
-                            if (newBounds.length > 0)
-                                {MAP.fitBounds(newBounds)}
+                            if (newBounds.length > 0) { MAP.fitBounds(newBounds) }
                         }
                         ).catch(e => {
                             console.log(e);
@@ -117,6 +116,13 @@ function switchNodesBrno() {
             })
         })
 }
+
+function switchInfo() {
+    let menu_window_new = document.getElementById("menu-window")
+    let infoText = "<p>Existují i další nápady, kam tu stránku rozvíjet - jaké další funkcionality by mohla mít. Ale už na to bohužel do odezvdání cvika nevyšel čas...</p>"
+    menu_window_new.innerHTML = infoText
+}
+
 /*
 var name = "";
 $.get('https://cors-anywhere.herokuapp.com/https://pdf.dpmb.cz/StopList.aspx?lc=36&zn=Chaloupky&cu=1178&n=9' + name, function(response) {

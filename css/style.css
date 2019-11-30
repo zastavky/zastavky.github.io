@@ -2,6 +2,9 @@
 
 body                    {background-color: #e6e6e6; font-family: Arial;}
 
+
+/*panel*/
+
 .panel                  {position: fixed; height: 100%; top: 0em; right:0em; bottom: 0em; width: 25em; background-color: white; box-shadow: -2px 0px 5px #a9a9a9;
                         transition: all 500ms;}
 
@@ -17,7 +20,7 @@ body                    {background-color: #e6e6e6; font-family: Arial;}
 
 #menu ul li a           {font-size: 0.8125rem; padding: 1.25rem; position: relative; top: 1.1875rem; color: black; font-weight: bold; text-decoration: none; }
 
-#menu ul li div         {font-size: 0.8125rem; padding-top: 1.35rem; position: relative; color: black; font-weight: bold; text-decoration: none;}
+#menu ul li div         {font-size: 0.8125rem; padding-top: 1.35rem; padding-bottom: 1rem; position: relative; color: black; font-weight: bold; text-decoration: none;}
 
 #menu li:hover          {background-color: #00b25a; cursor: pointer; box-shadow: 0px 0px 5px #a9a9a9;}
 
@@ -32,20 +35,44 @@ div #menu-window        {top: 9.5625rem; bottom: 10vh; left: 0rem; right: 0rem; 
 
 .main.hidden_panel      {width: 100vw;}
 
-#m                      {height: 100vh;}
 
-.clusterText            {color: black; position: relative; top: 0.2rem; }
-
-.clusterIcon            {background-image: url("../icons/zastavka_kordis_100_100_negative.svg"); font-size: 0.8rem; font-family: 'Arial Narrow' ;text-align: center; }
+/*hide button*/
 
 #button                 {width: 30px; height: 40px; position: fixed; top: 50%; right: 25rem; background-color: white; border: none; box-shadow: 0px 0px 5px #a9a9a9;
-                        transition: all 500ms; cursor: pointer; font-family: sans-serif; font-size: 1.5em;}
+    transition: all 500ms; cursor: pointer; font-family: sans-serif; font-size: 1.5em;}
 
 #button:focus           {outline: none;}
 
 #button.hidden_btn      {right: 0%;}
 
 
+/*scrollbar*/
+/* width */
+::-webkit-scrollbar {width: 10px;}
+  
+/* Track */
+::-webkit-scrollbar-track {background: #f1f1f1;}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {background: #00b25a;}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {background: #555;}
+
+
+/*map-window*/
+
+#m                      {height: 100vh;}
+
+
+/*cluster icons*/
+
+.clusterText            {color: black; position: relative; top: 0.2rem; }
+
+.clusterIcon            {background-image: url("../icons/zastavka_kordis_100_100_negative.svg"); font-size: 0.8rem; font-family: 'Arial Narrow' ;text-align: center; }
+
+
+/*nodes in Panel*/
 .nodesTable             {position: relative; left: 10%; width: 80%;}
 
 .nodesTable td          {background-color: #e6e6e6; border: 1px solid #a9a9a9; padding: 0.2rem; text-align: center;}
@@ -54,13 +81,56 @@ div #menu-window        {top: 9.5625rem; bottom: 10vh; left: 0rem; right: 0rem; 
 
 .leaflet-control-graphicscale                 {background-color: white; border-radius: 4px; box-shadow: 0px 0px 0px 1.5px #a9a9a9aa; font-size: 0.7rem; padding-right: 0.5rem;}
 
+
 /*stop Info pop Up*/
 
-.stopInfo               {font-family: 'Arial'; }
+.leaflet-popup          {}
 
-.stopName               {text-align: center; background-color: #00b25a; color: white; padding: 0.25rem; font-size: 0.9rem; min-width: 15rem; max-width:25rem;}
+.leaflet-popup-content-wrapper {border-radius: 0px;}
 
-#table-content          {text-align: center; width: 100%;}
+.leaflet-popup-content  {margin: 2px; padding: 0px;}
+
+div#table               {overflow: auto; max-height: 200px;}
+
+.leaflet-container a.leaflet-popup-close-button {color: white;}
+
+.leaflet-container a.leaflet-popup-close-button:hover {color: white; text-shadow: 0px 0px 5px white; font-weight: bold;}
+
+.leaflet-popup-tip      {width: 0px; height: 0px;}
+
+#table-content          {text-align: center; width: 100%; border: 2px solid #a9a9a9; border-collapse: collapse;}
+
+#stopInfo               {font-family: 'Arial';}
+
+.stopName               {text-align: center; background-color: #00b25a; color: white; padding: 0.25rem; font-size: 0.9rem; }
+
+.stopInfoDirection      {background-color: #a9a9a9; color: white; font-size: 0.8rem; font-weight: bold; margin: 0px; padding: 0px;}
+
+.connectionInfoLineName {width: 3%; font-weight: bold;}
+
+.connectionInfoLineName-tram    {background-color: red; color: white; font-weight: bold;}
+
+.connectionInfoLineName-trolleybus    {background-color: green; color: white; font-weight: bold;}
+
+.connectionInfoLineName-bus    {background-color: blue; color: white; font-weight: bold;}
+
+.connectionInfoLineName-nightbus   {background-color: black; color: white; font-weight: bold;}
+
+.connectionInfoLineName-regionbus    {background-color: green; color: white; font-weight: bold;}
+
+.connectionInfoLineName-train    {background-color: purple; color: white; font-weight: bold;}
+
+.connectionInfoLineName-historical    {background-color: orange; color: white; font-weight: bold;}
+
+.connectionInfoLineName-unknown    {background-color: gray; color: white; font-weight: bold;}
+
+.connectionInfoFinalStop {width: 50%; font-weight: bold;}
+
+.connectionInfoTimeMark {min-width: 5%; max-width: 15%;}
 
 .waiting                {text-align: center; width: 100%;}
+
+p.downloadDeparturesFailed {font-size: 1rem; font-weight: bold;}
+
+
  
