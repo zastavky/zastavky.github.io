@@ -101,6 +101,7 @@ function lowFloorAssignment(lowFloor) {
 
 function lineColorAssignment(lineName) {
     let className = "connectionInfoLineName"
+    let lineNum = lineName.slice(1,)
 
     if (Number.isInteger(parseInt(lineName))) {
         if (lineName < 20) {
@@ -115,11 +116,11 @@ function lineColorAssignment(lineName) {
             className += "-regionbus"
         }
     } else if (lineName.slice(0, 1) == "P") {
-        if (lineName < 20) {
+        if (lineNum < 20) {
             className += "-tram"
-        } else if (lineName >= 20 && lineName < 40) {
+        } else if (lineNum >= 20 && lineNum < 40) {
             className += "-trolleybus"
-        } else if (lineName >= 40 && lineName < 90) {
+        } else if (lineNum >= 40 && lineNum < 90) {
             className += "-bus"
         }
     } else if (lineName.slice(0, 1) == "S") {
