@@ -93,9 +93,9 @@ function downloadDepartures(data, stops_direction, stop_id) {
 
 function lowFloorAssignment(lowFloor) {
     if (lowFloor) {
-        return "<img src='icons/isLowfloor.svg' alt='True'><img>"
+        return "<img src='icons/isLowFloor.svg' alt='True'><img>"
     } else {
-        return "<img src='icons/isNotLowfloor.svg' alt='False'><img>"
+        return "<img src='icons/isNotLowFloor.svg' alt='False'><img>"
     }
 }
 
