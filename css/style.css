@@ -124,9 +124,9 @@ div#table               {overflow: auto; max-height: 200px;}
 
 .connectionInfoLineName-unknown    {background-color: gray; color: white; font-weight: bold;}
 
-.connectionInfoFinalStop {width: 50%; font-weight: bold;}
+.connectionInfoFinalStop {width: 60%; font-weight: bold;}
 
-.connectionInfoTimeMark {min-width: 5%; max-width: 15%;}
+.connectionInfoTimeMark {width: 15%;}
 
 .waiting                {text-align: center; width: 100%;}
 

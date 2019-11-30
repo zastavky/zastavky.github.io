@@ -47,9 +47,10 @@ function switchNodesRegion() {
                     fetch("https://raw.githubusercontent.com/zastavky/zastavky.github.io/master/geojson/stops.geojson")
                         .then(response => response.json())
                         .then(stops_json => {
+                            console.log(e)
                             newBounds = []
                             for (let i = 0; i < stops_json.features.length; i++) {
-                                if (stops_json.features[i].properties.stop_name.toUpperCase().includes(e.srcElement.innerHTML.toUpperCase() + ",")) {
+                                if (stops_json.features[i].properties.stop_name.toUpperCase().includes(e.target.innerHTML.toUpperCase() + ",")) {
                                     newPoint = []
                                     lat = stops_json.features[i].geometry.coordinates[1]
                                     newPoint.push(lat)
@@ -94,7 +95,7 @@ function switchNodesBrno() {
                         .then(stops_json => {
                             newBounds = []
                             let stops
-                            stops = e.srcElement.innerHTML.toUpperCase().split(" + ")
+                            stops = e.target.innerHTML.toUpperCase().split(" + ")
                             for (let i = 0; i < stops_json.features.length; i++) {
                                 for (let j = 0; j < stops.length; j++) {
                                     if (stops_json.features[i].properties.stop_name.toUpperCase() == stops[j]) {
