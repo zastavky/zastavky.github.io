@@ -28,7 +28,7 @@ function switchIntro() {
 function switchNodesRegion() {
     let menu_window_new = document.getElementById("menu-window")
     let innerHTMLText = "<table class='nodesTable'>"
-    fetch("https://gist.githubusercontent.com/zastavky/f0f1165cc6af94483fcd9b4dda199539/raw/c33d45aa38115d54ae54f6834ae6a63e3568eed6/nodes.json")
+    fetch("https://gist.githubusercontent.com/zastavky/2c0471269e67e21c0777f257f159ca59/raw/e03a4d45d865d63e241903e74f5424e5b85fb279/nodesBrno.json")
         .then(response => response.json())
         .then(nodes => {
             for (node in nodes) {
@@ -74,7 +74,7 @@ function switchNodesBrno() {
     let menu_window_new = document.getElementById("menu-window")
     menu_window_new.removeEventListener("click", function () { })
     let innerHTMLText = "<table class='nodesTable'>"
-    fetch("https://gist.githubusercontent.com/zastavky/2c0471269e67e21c0777f257f159ca59/raw/506dfb1041d3bd1f75de2b7a11d28ec7fb4a284d/nodesBrno.json")
+    fetch("https://gist.githubusercontent.com/zastavky/2c0471269e67e21c0777f257f159ca59/raw/a45ffdd39873443aa29ae51ff7c9be057e19bf56/nodesBrno.json")
         .then(response => response.json())
         .then(nodes => {
             for (node in nodes) {
